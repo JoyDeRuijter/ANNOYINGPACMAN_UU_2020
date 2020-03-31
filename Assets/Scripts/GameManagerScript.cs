@@ -31,6 +31,8 @@ public class GameManagerScript : MonoBehaviour
         livesList.Add(life2); 
         livesList.Add(life3);
         StartCoroutine(StartGame());
+        
+        FindObjectOfType<AdvertSpawner>().SpawnAdvert();
     }
 
     //Starts the sequence of ghosts moving from the ghosthouse. Ghosts aren't activated until they are outside the house. Time to release can be varied by changing the WaitForSeconds variable

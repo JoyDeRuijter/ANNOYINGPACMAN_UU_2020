@@ -17,6 +17,9 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Adds" t="Include">
+            <e p="AdvertSize.cs" t="Include" />
+            <e p="AdvertSpawner.cs" t="Include" />
+            <e p="CanvasSize.cs" t="Include" />
             <e p="CloseButton.cs" t="Include" />
           </e>
           <e p="BlinkyScript.cs" t="Include" />
