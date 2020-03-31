@@ -45,3 +45,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ads
+    uniqueID: 1671026835
+    locked: 0

@@ -22,6 +22,7 @@ public class GameManagerScript : MonoBehaviour
 
     public AudioSource deathSound, startSound, victorySound;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -114,6 +115,7 @@ public class GameManagerScript : MonoBehaviour
     //Stops all current activity on player death and starts the sequences that restart the game. Resets the game if all lives are lost
     public void PlayerDeath()
     {
+        FindObjectOfType<AdvertSpawner>().SpawnAdvert();
         lives -= 1;
         InitializeLives();
         deathSound.Play();

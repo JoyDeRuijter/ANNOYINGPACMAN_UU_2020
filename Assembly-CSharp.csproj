@@ -69,6 +69,10 @@
     <Compile Include="Assets\Old\ModelScript.cs" />
     <Compile Include="Assets\Old\OneWayCollider.cs" />
     <Compile Include="Assets\Old\PinkyMoveScript.cs" />
+    <Compile Include="Assets\Scripts\Adds\AdvertSize.cs" />
+    <Compile Include="Assets\Scripts\Adds\AdvertSpawner.cs" />
+    <Compile Include="Assets\Scripts\Adds\CanvasSize.cs" />
+    <Compile Include="Assets\Scripts\Adds\CloseButton.cs" />
     <Compile Include="Assets\Scripts\BlinkyScript.cs" />
     <Compile Include="Assets\Scripts\ClydeScript.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
