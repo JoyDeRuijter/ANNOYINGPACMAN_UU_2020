@@ -6,10 +6,10 @@ public class AdvertSize : MonoBehaviour
 {
     public float height;
     public float width;
-    public Vector3 position;
+    public Vector2 position;
 
     
-    void Start()
+    void Awake()
     {
         RectTransform objectRectTransform = gameObject.GetComponent<RectTransform>();
         height = objectRectTransform.rect.height;
@@ -18,6 +18,5 @@ public class AdvertSize : MonoBehaviour
         
         Debug.Log("height = " + height);
         Debug.Log("width = " + width);
-
     }
 }

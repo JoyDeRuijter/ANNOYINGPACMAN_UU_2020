@@ -19,21 +19,24 @@ public class AdvertSpawner : MonoBehaviour
     public float topBorder;
     public float botBorder;
 
-    
-    //CanvasSize canvasSize;
-    //AdvertSize advertSize;
-    
-    //Vector2 position;
     Vector2 advertPosition;
+
 
     private void Start()
     {
         CanvasSize canvasSize = canvas.GetComponent<CanvasSize>();
-        
+
         leftBorder = canvasSize.position.x - (canvasSize.width / 2);
+        Debug.Log("canvassize x = " + canvasSize.position.x);
+        Debug.Log("canvassize width = " + canvasSize.width/2);
+        Debug.Log("leftborder = " + leftBorder);
+
         rightBorder = canvasSize.position.x + (canvasSize.width / 2);
+       // Debug.Log("rightBorder = " + rightBorder);
+
         topBorder = canvasSize.position.y + (canvasSize.height / 2);
         botBorder = canvasSize.position.y - (canvasSize.height / 2);
+
     }
 
 
@@ -48,12 +51,16 @@ public class AdvertSpawner : MonoBehaviour
             case 0:
                 GameObject adv0clone = Instantiate(adv0, AdvertPosition(0), Quaternion.identity);
                 adv0clone.transform.SetParent(advertCanvas, false);
+                
+                Debug.Log("position1 =" + AdvertPosition(0));
                 //adv0clone.transform.parent = canvas.transform;
                 break;
             case 1:
-                GameObject adv1clone = Instantiate(adv1, AdvertPosition(1), Quaternion.identity);
-                adv1clone.transform.SetParent(advertCanvas, false);
-                //adv1clone.transform.parent = canvas.transform;
+                 GameObject adv1clone = Instantiate(adv1, AdvertPosition(1), Quaternion.identity);
+                 adv1clone.transform.SetParent(advertCanvas, false);
+                 //adv1clone.transform.parent = canvas.transform;
+                 
+                Debug.Log("position2 =" + AdvertPosition(1));
                 break;
             case 2:
                 GameObject adv2clone = Instantiate(adv2, AdvertPosition(2), Quaternion.identity);
@@ -108,10 +115,12 @@ public class AdvertSpawner : MonoBehaviour
             case 0: 
                 advertPosition.x = Random.Range(leftBorder, rightBorder - adv0.GetComponent<AdvertSize>().width); 
                 advertPosition.y = Random.Range(botBorder + adv0.GetComponent<AdvertSize>().height, topBorder);
+                Debug.Log("advertsize = " + adv0.GetComponent<AdvertSize>().width);
                 break;
             case 1: 
                 advertPosition.x = Random.Range(leftBorder, rightBorder - adv1.GetComponent<AdvertSize>().width); 
                 advertPosition.y = Random.Range(botBorder + adv1.GetComponent<AdvertSize>().height, topBorder);
+                Debug.Log("advertsize1 = " + adv0.GetComponent<AdvertSize>().width);
                 break;
             case 2: 
                 advertPosition.x = Random.Range(leftBorder, rightBorder - adv2.GetComponent<AdvertSize>().width); 

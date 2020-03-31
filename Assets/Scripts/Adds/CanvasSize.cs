@@ -9,15 +9,11 @@ public class CanvasSize : MonoBehaviour
     public Vector3 position;
 
     
-    void Start()
+    void Awake()
     {
         RectTransform objectRectTransform = gameObject.GetComponent<RectTransform>();
         height = objectRectTransform.rect.height;
         width = objectRectTransform.rect.width;
-        position = objectRectTransform.rect.position;
-        
-        //Debug.Log("height = " + height);
-        //Debug.Log("width = " + width);
-
+        position = new Vector2(0, 0);
     }
 }
