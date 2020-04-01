@@ -115,7 +115,9 @@ public class GameManagerScript : MonoBehaviour
     //Stops all current activity on player death and starts the sequences that restart the game. Resets the game if all lives are lost
     public void PlayerDeath()
     {
+//Spawns an advertisement everytime the player dies, by calling the SpawnAdvert method.
         FindObjectOfType<AdvertSpawner>().SpawnAdvert();
+
         lives -= 1;
         InitializeLives();
         deathSound.Play();
@@ -196,7 +198,6 @@ public class GameManagerScript : MonoBehaviour
     {
         if(pelletsCollected == 240 && powerPelletsCollected == 4)
         {
-            //TODO: Stop all movement
             victorySound.Play();
             yield return new WaitForSeconds(5);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

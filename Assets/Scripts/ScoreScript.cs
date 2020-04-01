@@ -14,24 +14,25 @@ public class ScoreScript : MonoBehaviour
     {
         score += 10;
         scoreText.text = score.ToString();
-        ScoreChecker();
+        CheckScore();
     }
 
     public void ScorePowerPellet()
     {
         score += 50;
         scoreText.text = score.ToString();
-        ScoreChecker();
+        CheckScore();
     }
 
     public void ScoreGhost()
     {
         score += 100;
         scoreText.text = score.ToString();
-        ScoreChecker();
+        CheckScore();
     }
 
-    public void ScoreChecker()
+//A method created to spawn an advertisement everytime the player earns a 100 points, by using a scoreCount int and calling the SpawnAdvert method.
+    public void CheckScore()
     {
         if (score >= scoreCount)
         {
